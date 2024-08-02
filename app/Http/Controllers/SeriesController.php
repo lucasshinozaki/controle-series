@@ -16,4 +16,8 @@ class SeriesController extends Controller
         // return view('listar-series', compact('series'));
         return view('series.index') -> with('series', $series);
     }
+
+    public function create() {
+        return view('series.create');
+    }
 }
