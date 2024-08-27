@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class SeriesController extends Controller
 {
     public function index(Request $request) {
-        $series = Serie::query()->orderBy('nome')->get();
+        $series = Serie::all();
         $mensagemSucesso = session('messagem.sucesso');
         // return view('listar-series', compact('series'));
         return view('series.index') -> with('series', $series)
