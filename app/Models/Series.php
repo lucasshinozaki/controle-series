@@ -19,7 +19,7 @@ class Series
 
     protected static function booted() {
         self::addGlobalScope('ordered', function(Builder $queryBuilder) {
-            $queryBuilder->orderBy('nome', 'desc');
+            $queryBuilder->orderBy('nome');
         });
     }
 
