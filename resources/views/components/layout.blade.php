@@ -9,6 +9,11 @@
 <body>
     <div class="container">
         <h1>{{$title}}</h1>
+        @isset($mensagemSucesso)
+            <div class="alert alert-sucess">
+                {{$mensagemSucesso}}
+            </div>
+        @endisset
         @if ($errors->any())
             <div class="alert alert-damage">
                 <ul>

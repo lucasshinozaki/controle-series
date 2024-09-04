@@ -6,6 +6,8 @@
                 Temporada: {{$season->number}}
             </a>
             <spam class="badge bg-secondary">
+                {{ $season->numberOfWatchedEpisodes()}} 
+                /
                 {{ $season->episodes->count()}}
             </spam>
         </li>
